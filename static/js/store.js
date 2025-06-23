@@ -5,7 +5,7 @@ document.querySelector('.cart-btns a[href="/checkout/"]').addEventListener('clic
     window.history.pushState({}, '', '/checkout');
     
     // Cargamos el contenido dinámicamente
-    fetch('./stores/checkout.html')
+    fetch('./store_filescheckout.html')
         .then(response => response.text())
         .then(html => {
             // Reemplazamos todo el documento
@@ -31,7 +31,7 @@ document.querySelector('.cart-btns a[href="/checkout/"]').addEventListener('clic
 //     window.history.pushState({}, '', '/product');
     
 //     // Cargamos el contenido dinámicamente
-//     fetch('./stores/product.html')
+//     fetch('./store_filesproduct.html')
 //         .then(response => response.text())
 //         .then(html => {
 //             // Reemplazamos todo el documento
@@ -57,7 +57,7 @@ document.querySelector('.main-nav a[href="/store/"]').addEventListener('click', 
     window.history.pushState({}, '', '/store');
     
     // Cargamos el contenido dinámicamente
-    fetch('./stores/store.html')
+    fetch('./store_filesstore.html')
         .then(response => response.text())
         .then(html => {
             // Reemplazamos todo el documento
@@ -83,7 +83,7 @@ document.querySelector('.wishlist a[href="/wishlist/"]').addEventListener('click
     window.history.pushState({}, '', '/wishlist');
     
     // Cargamos el contenido dinámicamente
-    fetch('./stores/wishlist.html')
+    fetch('./store_fileswishlist.html')
         .then(response => response.text())
         .then(html => {
             // Reemplazamos todo el documento
@@ -109,7 +109,7 @@ document.querySelector('.header-links a[href="/login/"]').addEventListener('clic
     window.history.pushState({}, '', '/login');
     
     // Cargamos el contenido dinámicamente
-    fetch('./admin/login.html')
+    fetch('./admin_fileslogin.html')
         .then(response => response.text())
         .then(html => {
             // Reemplazamos todo el documento

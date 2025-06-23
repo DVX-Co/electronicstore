@@ -1956,6 +1956,13 @@ textarea.input {
   border-radius: 40px 0px 0px 40px;
 }
 
+.login-register {
+  font-weight: 700;
+  background: #D10024;
+  color: #FFF;
+  border: none;
+}
+
 .newsletter form .newsletter-btn {
   width: 160px;
   height: 40px;

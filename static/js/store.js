@@ -23,7 +23,6 @@ document.querySelector('.cart-btns a[href="/checkout/"]').addEventListener('clic
             window.location.href = 'checkout.html'; // Fallback
         });
 });
-
 // document.querySelector('.cart-btns a[href="/product/"]').addEventListener('click', function(e) {
 //     e.preventDefault();
     
@@ -49,7 +48,6 @@ document.querySelector('.cart-btns a[href="/checkout/"]').addEventListener('clic
 //             window.location.href = 'product.html'; // Fallback
 //         });
 // });
-
 document.querySelector('.main-nav a[href="/store/"]').addEventListener('click', function(e) {
     e.preventDefault();
     
@@ -75,7 +73,6 @@ document.querySelector('.main-nav a[href="/store/"]').addEventListener('click', 
             window.location.href = 'store.html'; // Fallback
         });
 });
-
 document.querySelector('.wishlist a[href="/wishlist/"]').addEventListener('click', function(e) {
     e.preventDefault();
     
@@ -101,7 +98,6 @@ document.querySelector('.wishlist a[href="/wishlist/"]').addEventListener('click
             window.location.href = 'wishlist.html'; // Fallback
         });
 });
-
 document.querySelector('.header-links a[href="/login/"]').addEventListener('click', function(e) {
     e.preventDefault();
     
@@ -127,7 +123,6 @@ document.querySelector('.header-links a[href="/login/"]').addEventListener('clic
             window.location.href = 'login.html'; // Fallback
         });
 });
-
 // Manejar el botón "Atrás" del navegador
 // window.addEventListener('popstate', () => {
 //     location.reload();

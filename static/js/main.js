@@ -1,24 +1,19 @@
 (function($) {
   "use strict"
-
   // Mobile Nav toggle
   $('.menu-toggle > a').on('click', function (e) {
     e.preventDefault();
     $('#responsive-nav').toggleClass('active');
   })
-
   // Fix cart dropdown from closing
   $('.cart-dropdown').on('click', function (e) {
     e.stopPropagation();
   });
-
   /////////////////////////////////////////
-
   // Products Slick
   $('.products-slick').each(function() {
     var $this = $(this),
         $nav = $this.attr('data-nav');
-
     $this.slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -45,12 +40,10 @@
       ]
     });
   });
-
   // Products Widget Slick
   $('.products-widget-slick').each(function() {
     var $this = $(this),
         $nav = $this.attr('data-nav');
-
     $this.slick({
       infinite: true,
       autoplay: true,
@@ -60,9 +53,7 @@
       appendArrows: $nav ? $nav : false,
     });
   });
-
   /////////////////////////////////////////
-
   // Product Main img Slick
   $('#product-main-img').slick({
     infinite: true,
@@ -72,7 +63,6 @@
     fade: true,
     asNavFor: '#product-imgs',
   });
-
   // Product imgs Slick
   $('#product-imgs').slick({
     slidesToShow: 3,
@@ -93,22 +83,18 @@
       },
     ]
   });
-
   // Product img zoom
   var zoomMainProduct = document.getElementById('product-main-img');
   if (zoomMainProduct) {
     $('#product-main-img .product-preview').zoom();
   }
-
   /////////////////////////////////////////
-
   // Input number
   $('.input-number').each(function() {
     var $this = $(this),
     $input = $this.find('input[type="number"]'),
     up = $this.find('.qty-up'),
     down = $this.find('.qty-down');
-
     down.on('click', function () {
       var value = parseInt($input.val()) - 1;
       value = value < 1 ? 1 : value;
@@ -116,7 +102,6 @@
       $input.change();
       updatePriceSlider($this , value)
     })
-
     up.on('click', function () {
       var value = parseInt($input.val()) + 1;
       $input.val(value);
@@ -124,18 +109,14 @@
       updatePriceSlider($this , value)
     })
   });
-
   var priceInputMax = document.getElementById('price-max'),
       priceInputMin = document.getElementById('price-min');
-
   priceInputMax.addEventListener('change', function(){
     updatePriceSlider($(this).parent() , this.value)
   });
-
   priceInputMin.addEventListener('change', function(){
     updatePriceSlider($(this).parent() , this.value)
   });
-
   function updatePriceSlider(elem , value) {
     if ( elem.hasClass('price-min') ) {
       console.log('min')
@@ -145,7 +126,6 @@
       priceSlider.noUiSlider.set([null, value]);
     }
   }
-
   // Price Slider
   var priceSlider = document.getElementById('price-slider');
   if (priceSlider) {
@@ -158,11 +138,9 @@
         'max': 999
       }
     });
-
     priceSlider.noUiSlider.on('update', function( values, handle ) {
       var value = values[handle];
       handle ? priceInputMax.value = value : priceInputMin.value = value
     });
   }
-
 })(jQuery);

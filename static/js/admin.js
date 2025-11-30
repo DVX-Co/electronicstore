@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}, 100);
 		}, index * 150);
 	});
-
 	// CORRECCIÓN: Gráficos interactivos con Chart.js
 	// Gráfico de ventas por categoría
 	const categoryCtx = document.getElementById('categoryChart').getContext('2d');
@@ -69,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		}
 	});
-
 	// Gráfico de rendimiento mensual
 	const performanceCtx = document.getElementById('performanceChart').getContext('2d');
 	const performanceChart = new Chart(performanceCtx, {
@@ -113,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		}
 	});
-
 	// CORRECCIÓN: Cerrar sidebar al hacer clic fuera de él en móvil
 	document.addEventListener('click', function(e) {
 		if (window.innerWidth <= 992) {
